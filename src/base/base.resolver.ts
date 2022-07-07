@@ -17,7 +17,7 @@ export function BaseResolver<
     @Mutation(() => Boolean, { name: `create${classRef.name}` })
     async createMutation(
       @Args({ type: () => createClassArgsDtoRef })
-      args: typeof createClassArgsDtoRef,
+      args: Type<CreateBaseClassDto>,
     ) {
       console.log('class is ', classRef.name);
       console.log('args captured are ', args);
