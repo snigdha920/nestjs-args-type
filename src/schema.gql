@@ -1,0 +1,12 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type Query {
+  sayHello: String!
+}
+
+type Mutation {
+  createDerivedXClass(a: Int!, b: Int!, x: Int!): Boolean!
+  createDerivedYClass(a: Int!, b: Int!, y: String!): Boolean!
+}
