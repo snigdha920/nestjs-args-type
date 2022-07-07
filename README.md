@@ -41,6 +41,24 @@ I want something like - to work:
 
 Essentially what I want to achieve is: Pass in the DTO class I want to use for validation of the arguments to the mutation in the base resolver, and have it work.
 
+## Steps to reproduce
+
+1. Run the server
+2. Go to the graphql playground at localhost:3000/graphql
+3. Run the mutation
+
+   ```graphql
+   mutation createMutation {
+     createDerivedYClass(a: 1, b: 2, y: "snigdha")
+   }
+   ```
+
+4. The validation of the parameters passes
+
+## Expected behaviour
+
+1. While running the mutation in step 3 of Steps to reproduce, the validation of the parameters should fail and the mutation should not be executed
+
 ## Similar issues
 
 - <https://github.com/nestjs/nest/issues/8274>
