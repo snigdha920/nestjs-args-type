@@ -19,12 +19,12 @@ $ npm run start:prod
 
 ## Explanation of the Issue
 
-- There are 3 classes - BaseClass, DerivedXClass, DerivedClassY
+- There are 3 classes - BaseClass, DerivedXClass, DerivedYClass
 - The DerivedXClass and DerivedYClass are inherited from the BaseClass
 - There is a BaseResolver, which is inherited by the resolvers of the derived classes
 - Inside the BaseResolver, there is a create mutation
 - This create mutation takes in different arguments depending on the dervied class
-- We pass the DTO of these arguments to the BaseResolver while inherting it in the derived resolvers
+- I pass the create DTO class of the derived classes to the BaseResolver while inherting it in the derived resolvers
 - The arguments are not being validated at all
 
 My guess is that is has something to do with the type of the `args` set [here](https://github.com/snigdha920/nestjs-args-type/blob/main/src/base/base.resolver.ts#L18):
